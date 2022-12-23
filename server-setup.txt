@@ -1,0 +1,8 @@
+Docker images reference:
+https://dev.to/mvillarrealb/creating-a-spark-standalone-cluster-with-docker-and-docker-compose-2021-update-6l4
+
+
+https://www.stxnext.com/blog/docker-jupyterlab-apache-livy-rest-api-apache-spark/
+
+# SPARK + HADOOP
+https://www.kdnuggets.com/2020/07/apache-spark-cluster-docker.html
