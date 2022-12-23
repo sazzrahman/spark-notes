@@ -6,3 +6,10 @@ https://www.stxnext.com/blog/docker-jupyterlab-apache-livy-rest-api-apache-spark
 
 # SPARK + HADOOP
 https://www.kdnuggets.com/2020/07/apache-spark-cluster-docker.html
+
+
+# Map Reduce
+https://dev.to/boyu1997/run-python-mapreduce-on-local-docker-hadoop-cluster-1g46
+
+# copy files inside a data node
+docker cp server-setup.txt jupyterlab:/opt/workspace/data/

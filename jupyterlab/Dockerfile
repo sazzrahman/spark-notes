@@ -1,10 +1,16 @@
-FROM cluster-apache-spark:3.0.2
+FROM cluster-base
 
- # Python packages
-   RUN pip3 install wget requests pandas numpy datawrangler findspark jupyterlab pyspark==2.4.7
+# -- Layer: JupyterLab
 
-   EXPOSE 8888
+ARG spark_version=3.0.0
+ARG jupyterlab_version=2.1.5
 
-   WORKDIR ${SHARED_WORKSPACE}
+RUN apt-get update -y && \
+    apt-get install -y python3-pip && \
+    pip3 install wget pyspark==${spark_version} jupyterlab==${jupyterlab_version}
 
-   CMD jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=
+# -- Runtime
+
+EXPOSE 8888
+WORKDIR ${SHARED_WORKSPACE}
+CMD jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=
